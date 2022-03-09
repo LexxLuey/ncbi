@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/christfa/public_html/ncbi2
+    - export DEPLOYPATH=/home/christfa/public_html/ncbi
     - /bin/cp -R * $DEPLOYPATH
