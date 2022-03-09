@@ -2,11 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests;
+use App\Models\Church;
 use App\Models\Student;
+use Illuminate\Http\Request;
+use App\Mail\NCBIRegistration;
+use Illuminate\Support\Facades\Mail;
 use App\Http\Requests\StoreStudentRequest;
 use App\Http\Requests\UpdateStudentRequest;
-use App\Http\Requests;
-use Illuminate\Http\Request;
 
 class StudentController extends Controller
 {
@@ -33,8 +36,8 @@ class StudentController extends Controller
      */
     public function create()
     {
-        //
-        return view('home');
+        $data['churches'] = Church::all();
+        return view('home', $data);
 
     }
 
@@ -71,7 +74,12 @@ class StudentController extends Controller
             'completed_growth_track' => $request->completed_growth_track == 'on' ? true : false
         ];
     
-        Student::create($postData);
+        $reg = Student::create($postData);
+
+        if ($postData['email']) {
+            Mail::to($postData['email'])->queue(new NCBIRegistration($reg));
+        }
+
         return redirect()->route('success')->with(['message' => 'Registered successfully!', 'status' => 'success']);
     }
 
