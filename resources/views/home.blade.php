@@ -58,7 +58,7 @@
                     <div class="col">
                         <div class="form-group">
                             <label for="phone" class="form-label mt-4">Phone Number</label>
-                            <input type="text" class="form-control" id="phone" name="phone_number"
+                            <input type="number" class="form-control" id="phone" name="phone_number"
                                 placeholder="Enter Phone Number" required>
                         </div>
                     </div>
@@ -87,11 +87,9 @@
                         <div class="form-group">
                             <label for="age_group" class="form-label mt-4">Centre</label>
                             <select class="form-select" id="age_group" name="centre" required>
-                                <option value="CFC ABUJA">CFC ABUJA</option>
-                                <option value="CFC GBOKO">CFC GBOKO</option>
-                                <option value="CFC MAKURDI">CFC MAKURDI</option>
-                                <option value="CFC SAGAMU">CFC SAGAMU</option>
-                                <option value="CFC KADUNA">CFC KADUNA</option>
+                                @foreach ($churches as $church)
+                                    <option value="{{ $church->id }}">{{ $church->name }}</option>
+                                @endforeach
                             </select>
                         </div>
                     </div>
