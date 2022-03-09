@@ -5,7 +5,7 @@
         <div class="col-xs-4 text-center">
             <h1>CONGRATULATIONS!!!</h1>
             <h3>You have successfully registered for the NCBI session.</h3>
-            <p class="lead">You will receive an email with your registration details in 3 days time or less.</p>
+            <p class="lead">A message has been sent to your email address for more information on how to proceed.</p>
 
         </div>
     </div>
