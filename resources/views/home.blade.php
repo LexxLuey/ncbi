@@ -6,21 +6,21 @@
             {{ csrf_field() }}
             <fieldset>
                 <div class="row pt-3 pb-3">
-                    <div class="col">
+                    <div class="col-md-4">
                         <div class="form-group">
                             <label for="first_name" class="form-label mt-4">First Name</label>
                             <input type="text" name="first_name" class="form-control" id="first_name"
                                 placeholder="Enter First Name" required>
                         </div>
                     </div>
-                    <div class="col">
+                    <div class="col-md-4">
                         <div class="form-group">
                             <label for="surname" class="form-label mt-4">Surname </label>
                             <input type="text" class="form-control" id="surname" placeholder="Enter Surname"
                                 name="surname" required>
                         </div>
                     </div>
-                    <div class="col">
+                    <div class="col-md-4">
                         <div class="form-group">
                             <label for="middle_name" class="form-label mt-4">Middle Name</label>
                             <input type="text" class="form-control" id="middle_name" placeholder="Enter Middle Name"
@@ -30,7 +30,7 @@
                 </div>
 
                 <div class="row">
-                    <div class="col">
+                    <div class="col-md-6">
                         <div class="form-group">
                             <label for="sex" class="form-label mt-4">Sex</label>
                             <select class="form-select" id="sex" name="sex" required>
@@ -39,7 +39,7 @@
                             </select>
                         </div>
                     </div>
-                    <div class="col">
+                    <div class="col-md-6">
                         <div class="form-group">
                             <label for="age_group" class="form-label mt-4">Age Group</label>
                             <select class="form-select" id="age_group" name="age_range" required>
@@ -55,14 +55,14 @@
                 </div>
 
                 <div class="row">
-                    <div class="col">
+                    <div class="col-md-6">
                         <div class="form-group">
                             <label for="phone" class="form-label mt-4">Phone Number</label>
                             <input type="number" class="form-control" id="phone" name="phone_number"
                                 placeholder="Enter Phone Number" required>
                         </div>
                     </div>
-                    <div class="col">
+                    <div class="col-md-6">
                         <div class="form-group">
                             <label for="email" class="form-label mt-4">Email</label>
                             <input type="email" class="form-control" id="email" placeholder="Enter Email Address"
@@ -72,7 +72,7 @@
                 </div>
 
                 <div class="row">
-                    <div class="col">
+                    <div class="col-md-6">
                         <div class="form-group">
                             <label for="marital_status" class="form-label mt-4">Marital Status</label>
                             <select class="form-select" id="marital_status" name="marital_status" required>
@@ -83,7 +83,7 @@
                             </select>
                         </div>
                     </div>
-                    <div class="col">
+                    <div class="col-md-6">
                         <div class="form-group">
                             <label for="age_group" class="form-label mt-4">Centre</label>
                             <select class="form-select" id="age_group" name="centre" required>
@@ -96,14 +96,14 @@
                 </div>
 
                 <div class="row">
-                    <div class="col">
+                    <div class="col-md-6">
                         <div class="form-group">
                             <label for="address" class="form-label mt-4">Address</label>
                             <input type="text" class="form-control" id="address" name="address"
                                 placeholder="Enter Contact Address" required>
                         </div>
                     </div>
-                    <div class="col">
+                    <div class="col-md-6">
                         <div class="form-group">
                             <label for="file" class="form-label mt-4">Passport Picture</label>
                             <input type="file" class="form-control" @error('file') is-invalid @enderror name="file"
