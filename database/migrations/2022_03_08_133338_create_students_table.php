@@ -21,7 +21,7 @@ class CreateStudentsTable extends Migration
             $table->enum('sex', ['male', 'female'])->nullable();
             $table->enum('age_range', ['Under 20', 'Above 40','20 - 25','26 - 30','31 - 35','36 - 40',])->nullable();
             $table->string('phone_number', 15)->nullable();
-            $table->string('email', 220)->nullable();
+            $table->string('email', 220)->nullable()->unique();
             $table->enum('marital_status',['single','married','divorced','widowed'])->nullable();
             $table->string('address', 225)->nullable();
             $table->string('photo', 250)->nullable();
