@@ -93,7 +93,7 @@
             </nav> --}}
             <div class="card">
                 <div class="card-body">
-                    <table id="datatable5" class="display" style="width:100%">
+                    <table id="datatable4" class="display" style="width:100%">
                         <thead>
                             <tr>
                                 <th>First Name</th>
@@ -140,7 +140,17 @@
                             @empty
                                 <p>Nothing in DB</p>
                             @endforelse
-
+                            <tfoot>
+                                <tr>
+                                    <th>First Name</th>
+                                    <th>Surname</th>
+                                    <th>Age Range</th>
+                                    <th>Sex</th>
+                                    <th>Centre</th>
+                                    <th>Growth Track</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </tfoot>
                     </table>
                 </div>
             </div>

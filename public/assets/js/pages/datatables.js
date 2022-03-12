@@ -21,6 +21,41 @@ $(document).ready(function () {
  
     // DataTable
     var table = $('#datatable4').DataTable({
+        dom: "Blfrtip",
+        buttons: [{
+                text: 'CSV <span class="material-icons">cloud_download</span>',
+                extend: 'csvHtml5',
+                exportOptions: {
+                    columns: ':visible:not(.not-export-col)'
+                },
+                "className": 'btn btn-dark'
+            },
+            {
+                text: 'Excel <span class="material-icons">cloud_download</span>',
+                extend: 'excelHtml5',
+                exportOptions: {
+                    columns: ':visible:not(.not-export-col)'
+                },
+                "className": 'btn btn-success'
+            },
+            {
+                text: 'PDF <span class="material-icons">cloud_download</span>', 
+                extend: 'pdfHtml5',
+                exportOptions: {
+                    columns: ':visible:not(.not-export-col)'
+                },
+                "className": 'btn btn-warning'
+            },
+            {
+                text: 'Print <span class="material-icons">cloud_download</span>',
+                extend: 'print',
+                exportOptions: {
+                    columns: ':visible:not(.not-export-col)'
+                },
+                "className": 'btn btn-info'
+            },
+
+        ],
         initComplete: function () {
             // Apply the search
             this.api().columns().every( function () {

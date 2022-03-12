@@ -1,4 +1,5 @@
-@extends('layout')
+@extends('layouts.user')
+@section('title', 'Application Successfully Submitted!')
 
 @section('content')
     <div class="container pt-3 pb-4">

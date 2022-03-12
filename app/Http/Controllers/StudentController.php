@@ -26,6 +26,9 @@ class StudentController extends Controller
 
     public function success()
     {
+        if ( !request()->is('/success') && url()->previous() !=  url('/store') ) {
+            return redirect()->to('/'); //Send them somewhere else
+        }
         return view('success');
     }
 
@@ -37,7 +40,7 @@ class StudentController extends Controller
     public function create()
     {
         $data['churches'] = Church::all();
-        return view('home', $data);
+        return view('form', $data);
 
     }
 
