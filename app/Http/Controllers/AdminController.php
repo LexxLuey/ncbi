@@ -68,7 +68,9 @@ class AdminController extends Controller
         ];
         // dd($data);
 
-        $pdf = PDF::loadView('admin.student.student-pdf',['student' => $student])->setOptions(['defaultFont' => 'sans-serif']);
+        $pdf = PDF::loadView('admin.student.student-pdf',['student' => $student]);
+        // return view('admin.student.student-pdf', ['student' => $student]);
+
         return $pdf->download('ncbi.pdf');
     }
 

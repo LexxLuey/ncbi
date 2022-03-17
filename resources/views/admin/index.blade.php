@@ -101,6 +101,7 @@
                                 <th>Phone</th>
                                 <th>Email</th>
                                 <th>Contact Address</th>
+                                <th>Centre</th>
                                 <th>Growth Track</th>
                                 <th>Actions</th>
                             </tr>
@@ -113,6 +114,7 @@
                                     <td>{{ $student->phone_number }}</td>
                                     <td>{{ $student->email }}</td>
                                     <td>{{ $student->address }}</td>
+                                    <td>{{ $student->centre }}</td>
                                     <td>
                                         @if ($student->completed_growth_track)
                                             <span class="badge badge-success">Completed</span>
@@ -147,6 +149,7 @@
                                     <th>Phone</th>
                                     <th>Email</th>
                                     <th>Contact Address</th>
+                                    <th>Centre</th>
                                     <th>Growth Track</th>
                                     <th>Actions</th>                                </tr>
                             </tfoot>
