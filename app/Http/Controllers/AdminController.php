@@ -8,6 +8,7 @@ use App\Http\Requests\UpdateAdminRequest;
 use App\Models\Student;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use PDF;
 
 class AdminController extends Controller
 {
@@ -55,6 +56,20 @@ class AdminController extends Controller
     {
         //
         return view('admin.student.student-details', ['student' => $student]);
+    }
+
+    /* 
+    Generate PDF
+    */
+    public function generatePDF(Student $student)
+    {
+        $data = [
+            'student' => $student,
+        ];
+        // dd($data);
+
+        $pdf = PDF::loadView('admin.student.student-pdf',['student' => $student])->setOptions(['defaultFont' => 'sans-serif']);
+        return $pdf->download('ncbi.pdf');
     }
 
     /**

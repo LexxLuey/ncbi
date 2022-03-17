@@ -98,9 +98,9 @@
                             <tr>
                                 <th>First Name</th>
                                 <th>Surname</th>
-                                <th>Age Range</th>
-                                <th>Sex</th>
-                                <th>Centre</th>
+                                <th>Phone</th>
+                                <th>Email</th>
+                                <th>Contact Address</th>
                                 <th>Growth Track</th>
                                 <th>Actions</th>
                             </tr>
@@ -110,9 +110,9 @@
                                 <tr>
                                     <td><a href=" {{ route('student', $student) }} ">{{ $student->first_name }}</a></td>
                                     <td>{{ $student->surname }}</td>
-                                    <td>{{ $student->age_range }}</td>
-                                    <td>{{ $student->sex }}</td>
-                                    <td>{{ $student->centre }}</td>
+                                    <td>{{ $student->phone_number }}</td>
+                                    <td>{{ $student->email }}</td>
+                                    <td>{{ $student->address }}</td>
                                     <td>
                                         @if ($student->completed_growth_track)
                                             <span class="badge badge-success">Completed</span>
@@ -144,12 +144,11 @@
                                 <tr>
                                     <th>First Name</th>
                                     <th>Surname</th>
-                                    <th>Age Range</th>
-                                    <th>Sex</th>
-                                    <th>Centre</th>
+                                    <th>Phone</th>
+                                    <th>Email</th>
+                                    <th>Contact Address</th>
                                     <th>Growth Track</th>
-                                    <th>Actions</th>
-                                </tr>
+                                    <th>Actions</th>                                </tr>
                             </tfoot>
                     </table>
                 </div>

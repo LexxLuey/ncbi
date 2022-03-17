@@ -87,6 +87,7 @@
                             </div>
                             <div class="card-footer px-5 py-3 d-flex justify-content-end">
                                 {{-- <a href="{{ route('edit-student', $student) }}" class="btn btn-success rounded-pill me-2">Edit</a> --}}
+                                <a href="{{ route('pdf-generate', $student) }}" class="btn btn-primary rounded-pill me-2">Print</a>
                                 <form action="{{ route('delete-student', $student) }}" method="POST">
                                     @csrf
                                     @method('DELETE')

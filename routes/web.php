@@ -34,5 +34,6 @@ Route::group(['middleware' => ['auth']], function () {
     Route::put('admin/student/{student}/update',  [AdminController::class, 'update'])->name('update-student');
     Route::delete('admin/student/{student}/delete',  [AdminController::class, 'destroy'])->name('delete-student');
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::get('pdf/generate/{student}', [AdminController::class, 'generatePDF'])->name('pdf-generate');
 });
 
